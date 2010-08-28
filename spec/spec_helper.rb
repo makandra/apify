@@ -7,16 +7,8 @@ ENV['RAILS_ENV'] ||= 'in_memory'
 require "#{File.dirname(__FILE__)}/app_root/config/environment"
 require "#{File.dirname(__FILE__)}/../lib/apify"
 
-require 'rubygems'
-
-gem 'jsonschema', '=2.0.0'
-gem 'webmock', '=1.3.4'
-gem 'rest-client', '=1.5.1'
-
 require 'spec/rails'
-require 'jsonschema'
 require 'webmock/rspec'
-require 'restclient'
 
 # Undo changes to RAILS_ENV
 silence_warnings {RAILS_ENV = ENV['RAILS_ENV']}

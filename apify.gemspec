@@ -15,6 +15,48 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "README.md"
   ]
+  s.files = [
+    ".gitignore",
+     "MIT-LICENSE",
+     "README.md",
+     "Rakefile",
+     "VERSION",
+     "apify.gemspec",
+     "app/helpers/apify_helper.rb",
+     "app/views/apify/api/_actions.html.erb",
+     "app/views/apify/api/_client.html.erb",
+     "app/views/apify/api/_overview.html.erb",
+     "app/views/apify/api/_protocol.html.erb",
+     "app/views/apify/api/docs.html.erb",
+     "lib/apify.rb",
+     "lib/apify/action.rb",
+     "lib/apify/api.rb",
+     "lib/apify/api_controller.rb",
+     "lib/apify/client.rb",
+     "lib/apify/errors.rb",
+     "lib/apify/exchange.rb",
+     "lib/apify/schema_helper.rb",
+     "spec/apify/action_spec.rb",
+     "spec/apify/client_spec.rb",
+     "spec/app_root/app/controllers/api_controller.rb",
+     "spec/app_root/app/controllers/application_controller.rb",
+     "spec/app_root/app/models/api.rb",
+     "spec/app_root/config/boot.rb",
+     "spec/app_root/config/database.yml",
+     "spec/app_root/config/environment.rb",
+     "spec/app_root/config/environments/in_memory.rb",
+     "spec/app_root/config/environments/mysql.rb",
+     "spec/app_root/config/environments/postgresql.rb",
+     "spec/app_root/config/environments/sqlite.rb",
+     "spec/app_root/config/environments/sqlite3.rb",
+     "spec/app_root/config/routes.rb",
+     "spec/app_root/lib/console_with_fixtures.rb",
+     "spec/app_root/script/console",
+     "spec/controllers/api_controller_spec.rb",
+     "spec/rcov.opts",
+     "spec/spec.opts",
+     "spec/spec_helper.rb"
+  ]
   s.homepage = %q{http://github.com/makandra/apify}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
@@ -44,9 +86,18 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<json>, [">= 0"])
+      s.add_runtime_dependency(%q<jsonschema>, [">= 0"])
+      s.add_runtime_dependency(%q<rest-client>, [">= 0"])
     else
+      s.add_dependency(%q<json>, [">= 0"])
+      s.add_dependency(%q<jsonschema>, [">= 0"])
+      s.add_dependency(%q<rest-client>, [">= 0"])
     end
   else
+    s.add_dependency(%q<json>, [">= 0"])
+    s.add_dependency(%q<jsonschema>, [">= 0"])
+    s.add_dependency(%q<rest-client>, [">= 0"])
   end
 end
 
