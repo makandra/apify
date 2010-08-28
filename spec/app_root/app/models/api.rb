@@ -12,6 +12,18 @@ class Api < Apify::Api
     end
   end
 
+  post :hello do
+    schema :args do
+      object('name' => string)
+    end
+    schema :value do
+      object('message' => string)
+    end
+    respond do
+      { 'message' => "Hello #{args['name']}" }
+    end
+  end
+
   post :echo_args do
     respond do
       args

@@ -59,17 +59,17 @@ module Apify
     
     def respond_with_action(action)
       args = params[:args].present? ? JSON.parse(params[:args]) : {}
-      exchange = action.respond(args)
-      render_api_response(exchange, "#{action.name}.json")
+      render_successful_request(action.respond(args), "#{action.name}.json")
+    rescue Exception => e
+      render_failed_request(e.message)
     end
 
-    def render_api_response(exchange, filename)
-      # p exchange.value
-      if exchange.successful?
-        send_data exchange.value.to_json, :status => '200', :type => 'application/json', :filename => filename
-      else
-        send_data exchange.value, :status => '500', :type => 'text/plain', :filename => filename
-      end
+    def render_successful_request(value, filename)
+      send_data value.to_json, :status => '200', :type => 'application/json', :filename => filename
+    end
+
+    def render_failed_request(message)
+      send_data message, :status => '500', :type => 'text/plain'
     end
 
     def render_method_not_allowed(method)

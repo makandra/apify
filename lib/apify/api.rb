@@ -2,7 +2,7 @@ module Apify
   class Api
     class << self
 
-      def action(method, name, &block)
+      def action(method, name, args = {}, &block)
         method = method.to_sym
         name = name.to_sym
         if block
@@ -10,24 +10,25 @@ module Apify
           indexed_actions[name][method] = action
           actions << action
         else
-          indexed_actions[name][method] or raise "Unknown API action: #{name}"
+          action = indexed_actions[name][method] or raise "Unknown API action: #{name}"
+          action.respond(args)
         end
       end
 
-      def get(name, &block)
-        action(:get, name, &block)
+      def get(*args, &block)
+        action(:get, *args, &block)
       end
 
-      def post(name, &block)
-        action(:post, name, &block)
+      def post(*args, &block)
+        action(:post, *args, &block)
       end
 
-      def put(name, &block)
-        action(:put, name, &block)
+      def put(*args, &block)
+        action(:put, *args, &block)
       end
 
-      def delete(name, &block)
-        action(:delete, name, &block)
+      def delete(*args, &block)
+        action(:delete, *args, &block)
       end
 
       def actions

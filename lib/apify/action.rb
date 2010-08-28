@@ -23,9 +23,7 @@ module Apify
       if block
         @responder = block
       else
-        Apify::Exchange.new.tap do |exchange|
-          exchange.respond(args, self)
-        end
+        Apify::Exchange.new.respond(args, self)
       end
     end
 

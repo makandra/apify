@@ -41,7 +41,7 @@ module Apify
       json = RestClient.send(method, url, params)
       JSON.parse(json)
     rescue RestClient::Unauthorized => e
-      raise Apify::RequestFailed.new("Unauthorized")
+      raise Apify::Unauthorized.new("Unauthorized")
     rescue RestClient::ExceptionWithResponse => e
       raise Apify::RequestFailed.new("API request failed with status #{e.http_code}", e.http_body)
     end
