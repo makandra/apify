@@ -1,6 +1,5 @@
 require 'json'
 require 'jsonschema'
-require 'restclient'
 
 require 'apify/errors'
 require 'apify/action'

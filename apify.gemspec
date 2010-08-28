@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{apify}
-  s.version = "0.3.0"
+  s.version = "0.3.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Henning Koch"]
@@ -78,7 +78,26 @@ Gem::Specification.new do |s|
      "spec/app_root/config/boot.rb",
      "spec/app_root/config/environment.rb",
      "spec/app_root/config/routes.rb",
-     "spec/controllers/api_controller_spec.rb"
+     "spec/controllers/api_controller_spec.rb",
+     "examples/client/client.rb",
+     "examples/host/app/controllers/application_controller.rb",
+     "examples/host/app/controllers/api_controller.rb",
+     "examples/host/app/helpers/application_helper.rb",
+     "examples/host/app/helpers/api_helper.rb",
+     "examples/host/app/models/api.rb",
+     "examples/host/config/environments/production.rb",
+     "examples/host/config/environments/development.rb",
+     "examples/host/config/environments/test.rb",
+     "examples/host/config/initializers/backtrace_silencers.rb",
+     "examples/host/config/initializers/inflections.rb",
+     "examples/host/config/initializers/mime_types.rb",
+     "examples/host/config/initializers/new_rails_defaults.rb",
+     "examples/host/config/initializers/session_store.rb",
+     "examples/host/config/initializers/cookie_verification_secret.rb",
+     "examples/host/config/routes.rb",
+     "examples/host/config/environment.rb",
+     "examples/host/config/boot.rb",
+     "examples/host/db/seeds.rb"
   ]
 
   if s.respond_to? :specification_version then
