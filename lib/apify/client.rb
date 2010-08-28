@@ -1,6 +1,8 @@
-# Require this dependency here, so code that just uses the client
+# Require these dependencies here, so code that just uses the client
 # can just require 'apify/client' and is not dependent on Rails.
+require 'json'
 require 'restclient'
+require 'apify/errors'
 
 module Apify
   class Client

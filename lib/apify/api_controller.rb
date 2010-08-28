@@ -42,7 +42,7 @@ module Apify
     end
 
     def api
-      configuration(:api) || self.class.api(::Api)
+      configuration(:api)
     end
 
     def authentication_configured?
