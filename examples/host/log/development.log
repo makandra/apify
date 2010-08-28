@@ -1,0 +1,175 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 14:35:50) [GET]
+
+ActionController::RoutingError (No route matches "/api/docs" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#docs (for 127.0.0.1 at 2010-08-28 14:36:02) [GET]
+
+NameError (uninitialized constant ApiController):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApiController#docs (for 127.0.0.1 at 2010-08-28 14:36:30) [GET]
+Rendering apify/api/docs
+Rendered apify/api/_overview (0.5ms)
+Rendered apify/api/_protocol (1.1ms)
+Rendered apify/api/_client (0.7ms)
+Rendered apify/api/_actions (18.1ms)
+Completed in 44ms (View: 42, DB: 0) | 200 OK [http://localhost/api/docs]
+
+
+Processing ApiController#docs (for 127.0.0.1 at 2010-08-28 14:36:50) [GET]
+Rendering apify/api/docs
+Rendered apify/api/_overview (0.1ms)
+Rendered apify/api/_protocol (0.1ms)
+Rendered apify/api/_client (0.1ms)
+Rendered apify/api/_actions (12.4ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/api/docs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 14:36:55) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (22.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 14:42:54) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApiController#docs (for 127.0.0.1 at 2010-08-28 14:42:58) [GET]
+Filter chain halted as [:require_api_authentication] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/api/docs]
+
+
+Processing ApiController#docs (for 127.0.0.1 at 2010-08-28 14:43:01) [GET]
+Filter chain halted as [:require_api_authentication] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/api/docs]
+
+
+Processing ApiController#docs (for 127.0.0.1 at 2010-08-28 14:43:06) [GET]
+Rendering apify/api/docs
+Rendered apify/api/_overview (0.5ms)
+Rendered apify/api/_protocol (1.2ms)
+Rendered apify/api/_client (0.8ms)
+Rendered apify/api/_actions (16.1ms)
+Completed in 92ms (View: 90, DB: 0) | 200 OK [http://localhost/api/docs]
+
+
+Processing ApiController#hello (for 127.0.0.1 at 2010-08-28 15:10:04) [POST]
+  Parameters: {"args"=>"{\"name\":\"Jack\"}"}
+Filter chain halted as [:require_api_authentication] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/api/hello]
+
+
+Processing ApiController#hello (for 127.0.0.1 at 2010-08-28 15:11:31) [POST]
+  Parameters: {"args"=>"{\"name\":\"Jack\"}"}
+Filter chain halted as [:require_api_authentication] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/api/hello]
+
+
+Processing ApiController#hello (for 127.0.0.1 at 2010-08-28 15:11:55) [POST]
+  Parameters: {"args"=>"{\"name\":\"Jack\"}"}
+
+ActionController::UnknownAction (No action responded to hello. Actions: api, authentication_configured?, and docs):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApiController#hello (for 127.0.0.1 at 2010-08-28 15:13:09) [POST]
+  Parameters: {"args"=>"{\"name\":\"Jack\"}"}
+Sending data hello.json
+Completed in 5ms (View: 1, DB: 0) | 200 [http://localhost/api/hello]
+
+
+Processing ApiController#hello (for 127.0.0.1 at 2010-08-28 15:13:17) [POST]
+  Parameters: {"args"=>"{\"name\":\"Jack\"}"}
+
+ActionController::UnknownAction (No action responded to hello. Actions: api, authentication_configured?, and docs):
+  /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+  /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+  /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
