@@ -36,7 +36,9 @@ module Apify
     def request(method, path, args = nil)
       url = build_url(path)
       args ||= {}
-      json = RestClient.send(method, url, :args => args.to_json)
+      params = { :args => args.to_json }
+      [:get, :head].include?(method) and params = { :params => params }
+      json = RestClient.send(method, url, params)
       JSON.parse(json)
     rescue RestClient::Unauthorized => e
       raise Apify::RequestFailed.new("Unauthorized")
