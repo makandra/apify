@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <title>API documentation</title>
+    <style type="text/css">
+    <!--
+      body {
+        font-family: arial, helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 19px;
+      }
+      #container {
+        max-width: 80%;
+        margin: 40px auto;
+      }
+      dt, dd {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      dt {
+        font-weight: bold;
+      }
+      dl {
+        margin-bottom: 0;
+      }
+      h1, h2, h3, p, dd, ol, ul {
+        margin-bottom: 0.6em;
+        margin-top: 0;
+      }
+      h2 {
+        margin-top: 1em;
+      }
+      code {
+        font-family: courier new, monospace;
+        font-size: 15px;
+        background-color: #eee;
+        padding: 0 2px
+      }
+      pre {
+        background-color: #eee;
+        padding: 5px;
+      }
+      .action {
+        border: 1px dotted #777;
+        padding: 10px;
+        margin-bottom: 0.8em;
+        background-color: #f4f4f4;
+      }
+      .action dl dd:last-child {
+        margin-bottom: 0;
+      }
+
+    -->
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>API documentation</h1>
+      <%= render :partial => 'apify/api/overview' %>
+      <%= render :partial => 'apify/api/protocol' %>
+      <%= render :partial => 'apify/api/client' %>
+      <%= render :partial => 'apify/api/actions' %>
+    </div>
+  </body>
+</html>

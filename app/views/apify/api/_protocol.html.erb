@@ -1,0 +1,38 @@
+<h2 id="api_protocol">Protocol</h2>
+
+<h3>Requests</h3>
+
+<ul>
+  <li>The API is accessed over plain HTTP.</li>
+  <% if authentication_configured? %>
+    <li>HTTP basic authentication is used.</li>
+  <% end %>
+  <li>Take care to use the correct HTTP method (<code>GET, POST, PUT, DELETE</code>) as documented for each action.</li>
+  <li>Some (but not all) actions take arguments.</li>
+  <li>Action arguments are serialized into a <strong>single</strong> HTTP parameter <code>args</code> as JSON.</li>
+  <li>You can download an example for a request's arguments by appending <code>?example=args</code> to the action URL.</li>
+  <li>You can download a <a href="http://json-schema.org/">JSON schema</a> for a valid request by appending <code>?schema=args</code> to the action URL. Using the schema and a library like <a href="http://github.com/Constellation/ruby-jsonchema">jasonschema</a> you can validate your requests before sending them. The API will only process requests that conform to this schema.</li>
+</ul>
+
+<h3>Responses</h3>
+
+<ul>
+  <li>Successful requests are returned with a status of 200 (OK).</li>
+  <li>The body of a successful response is always a hash, serialized as JSON.</li>
+  <li>Requests that have errors are returned with a status of 500 (internal server error). The body of a error response is an error message in plain text (no JSON here).</li>
+  <li>You can download an example for a successful response value by appending <code>?example=value</code> to the action URL.</li>
+  <li>You can download a <a href="http://json-schema.org/">JSON schema</a> for a successful response by appending <code>?schema=value</code> to the URL. The API guarantees that all responses conform to this schema.</li>
+</ul>
+
+<h3>Example for a request/response exchange</h3>
+
+<ol>
+  <li>
+    API client sends to API host: <code>POST http://api-host/api/hello?args=JSON</code>
+    <br />
+    where JSON is a serialized JSON object: <code>'{ "name": "Jack" }'</code>
+  </li>
+  <li>
+   API host returns a response with a status of 200 (OK) and a serialized JSON object as its body: <code>'{ "message": "Hello Jack" }'</code>
+  </li>
+</ol>

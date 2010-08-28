@@ -1,0 +1,38 @@
+<h2 id="api_client">Using the Ruby client</h2>
+
+<p>
+  An easy way to use the API is to use the <code>Apify::Client</code> class.
+  It takes care of the protocol details and lets you focus on exchanging data.
+</p>
+
+<h3>Installation</h3>
+
+First install the Apify gem:
+
+<pre><code>sudo gem install apify</code></pre>
+
+In Rails 2, add the following to your environment.rb:
+
+<pre><code>config.gem 'aegis'</code></pre>
+
+In Rails 3, add the following to your Gemfile:
+
+<pre><code>gem 'aegis'</code></pre>
+
+<h3>Usage</h3>
+
+<pre><code>client = Apify::Client.new(:host => 'localhost:3000', :user => 'api', :password => 'secret')
+client.post('/api/hello', :name => 'Jack') # { 'message' => 'Hello Jack' }</code></pre>
+
+<p>
+  Errors can be caught and inspected like this:
+</p>
+
+<pre><code>begin
+  client.get('/api/hello', :name => 'Jack') # { 'message' => 'Hello Jack' }
+rescue Apify::RequestFailed => e
+  puts "Oh no! The API request failed."
+  puts "Message: #{e.message}"
+  puts "Response: #{e.response_body}"
+end
+</code></pre>

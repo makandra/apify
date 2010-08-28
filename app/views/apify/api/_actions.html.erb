@@ -1,0 +1,38 @@
+<h2 id="api_actions">Available actions</h2>
+
+<% api.actions.each do |action| %>
+
+  <div class="action">
+
+    <h3><%= action.method.to_s.upcase %> <%= action.name %></h3>
+
+    <% if action.description %>
+      <p><%=h action.description %></p>
+    <% end %>
+
+    <dl>
+      <dt>Arguments</dt>
+      <dd>
+        <% if action.takes_args? %>
+          <%= api_docs_artifact(action, :schema, :args) %>
+          <br />
+          <%= api_docs_artifact(action, :example, :args) %>
+        <% else %>
+          none
+        <% end %>
+      </dd>
+      <dt>Return value</dt>
+      <dd>
+        <% if action.returns_value? %>
+          <%= api_docs_artifact(action, :schema, :value) %>
+          <br />
+          <%= api_docs_artifact(action, :example, :value) %>
+        <% else %>
+          none
+        <% end %>
+      </dd>
+    </dl>
+
+  </div>
+
+<% end %>
