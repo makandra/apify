@@ -45,6 +45,8 @@ Connect the routes to your API in `config/routes.rb`:
 
 You have now exposed an API action under `http://host/api/ping`.
 
+An example for this setup can also be found under the `examples/host` directory inside the repository.
+
 
 Protocol
 --------
@@ -207,6 +209,8 @@ Errors can be caught and inspected like this:
       puts "Message: #{e.message}"
       puts "Response: #{e.response_body}"
     end
+
+An example for an API can be found under the `examples/client` directory inside the repository.
 
 
 Dealing with dates and timestamps
