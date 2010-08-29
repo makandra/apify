@@ -7,7 +7,7 @@
     <h3><%= action.method.to_s.upcase %> <%= action.name %></h3>
 
     <% if action.description %>
-      <p><%=h action.description %></p>
+      <p><%= action.description.html_safe %></p>
     <% end %>
 
     <dl>
