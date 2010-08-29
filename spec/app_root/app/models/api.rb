@@ -32,19 +32,13 @@ class Api < Apify::Api
 
   post :with_args_schema do
     schema :args do
-      { "type" => "object",
-        "properties" => {
-          "string_arg" => string
-      }}
+      object("string_arg" => string)
     end
   end
 
   post :with_value_schema do
     schema :value do
-      { "type" => "object",
-        "properties" => {
-          "string_value" => string
-      }}
+      object("string_value" => string)
     end
     respond do
       args

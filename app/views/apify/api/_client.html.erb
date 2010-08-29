@@ -11,13 +11,19 @@ First install the Apify gem:
 
 <pre><code>sudo gem install apify</code></pre>
 
+If your client code is not a Rails application:
+
+<pre><code>require 'rubygems'
+gem 'apify'
+require 'apify/client'</code></pre>
+
 In Rails 2, add the following to your environment.rb:
 
-<pre><code>config.gem 'aegis'</code></pre>
+<pre><code>config.gem 'apify'</code></pre>
 
 In Rails 3, add the following to your Gemfile:
 
-<pre><code>gem 'aegis'</code></pre>
+<pre><code>gem 'apify'</code></pre>
 
 <h3>Usage</h3>
 
