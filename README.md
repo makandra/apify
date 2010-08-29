@@ -1,7 +1,7 @@
 Apify
 =====
 
-Apify lets you bolt an RPC-style [JSON](http://en.wikipedia.org/wiki/JSON) API onto your Rails application.
+Apify lets you bolt a [JSON](http://en.wikipedia.org/wiki/JSON) API onto your Rails application.
 Optional features are auto-generated API documentation, request validation with [JSON Schema](http://json-schema.org/)
 and a client class to consume Apify APIs from Ruby code.
 
