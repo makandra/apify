@@ -19,7 +19,7 @@
 <ul>
   <li>Successful requests are returned with a status of 200 (OK).</li>
   <li>The body of a successful response is always a hash, serialized as JSON.</li>
-  <li>Requests that have errors are returned with a status of 500 (internal server error). The body of a error response is an error message in plain text (no JSON here).</li>
+  <li>Requests that have errors are returned with a status of 500 (internal server error). The body of a error response is an error message in the response's content type (won't be JSON in most cases).</li>
   <li>You can download an example for a successful response value by appending <code>?example=value</code> to the action URL.</li>
   <li>You can download a <a href="http://json-schema.org/">JSON schema</a> for a successful response by appending <code>?schema=value</code> to the URL. The API guarantees that all responses conform to this schema.</li>
 </ul>
