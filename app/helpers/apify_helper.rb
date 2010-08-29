@@ -7,7 +7,7 @@ module ApifyHelper
     download_tooltip = "#{action.method.to_s.upcase} #{download_url} to download"
     download_link = link_to('download', download_url, :method => action.method, :title => download_tooltip)
     json = JSON.pretty_generate(action.send(artifact, nature))
-    embedded = "<pre id='#{show_id}' style='display: none'>#{json}</pre>"
+    embedded = "<pre id='#{show_id}' style='display: none'><code>#{json}</code></pre>"
     "#{artifact.to_s.humanize} (#{show_link}, #{download_link})#{embedded}".html_safe
   end
 
