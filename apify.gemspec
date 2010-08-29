@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Henning Koch"]
-  s.date = %q{2010-08-28}
+  s.date = %q{2010-08-29}
   s.description = %q{Compact definition of JSON APIs for Rails applications. }
   s.email = %q{github@makandra.de}
   s.extra_rdoc_files = [
@@ -97,6 +97,7 @@ Gem::Specification.new do |s|
      "spec/app_root/lib/console_with_fixtures.rb",
      "spec/app_root/script/console",
      "spec/controllers/api_controller_spec.rb",
+     "spec/models/api_spec.rb",
      "spec/rcov.opts",
      "spec/spec.opts",
      "spec/spec_helper.rb"
@@ -123,6 +124,7 @@ Gem::Specification.new do |s|
      "spec/app_root/config/environment.rb",
      "spec/app_root/config/routes.rb",
      "spec/controllers/api_controller_spec.rb",
+     "spec/models/api_spec.rb",
      "examples/client/client.rb",
      "examples/host/app/controllers/application_controller.rb",
      "examples/host/app/controllers/api_controller.rb",
