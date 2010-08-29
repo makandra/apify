@@ -290,8 +290,4 @@ We cannot guarantee Rails 3 compatibility at this point, but we will upgrade the
 Credits
 -------
 
-Henning Koch
-
-{makandra.com}[http://makandra.com/]
-
-{gem-session.com}[http://gem-session.com/]
+Henning Koch ([makandra.com](http://makandra.com/), [gem-session.com](http://gem-session.com/))
