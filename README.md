@@ -59,7 +59,7 @@ If you are planning to consume your Apify API with the `Apify::Client` class, yo
 - API actions can take arguments. Those are serialized into a **single** HTTP parameter `args` as JSON. This is to simplify client code that consumes your API (nested params are hard).
 - Successful responses are returned with a status of 200 (OK).
 - The body of a successful response is always a hash, serialized as JSON.
-- Requests that have errors are returned with a status of 500 (internal server error). The body of a error response is an error message in the response's content type (won't be JSON in most cases).
+- Requests that have errors are returned with a status that is **not** 200. The body of a error response is an error message in the response's content type (won't be JSON in most cases).
 
 
 Defining API actions
