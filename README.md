@@ -210,7 +210,11 @@ Errors can be caught and inspected like this:
       puts "Response: #{e.response_body}"
     end
 
-An example for an API can be found under the `examples/client` directory inside the repository.
+Use the `:protocol` option to connect using SSL:
+
+    client = Apify::Client.new(:host => 'api.site.com', :user => 'api', :password => 'secret', :protocol => 'https')
+
+An example for an API client can be found under the `examples/client` directory inside the repository.
 
 
 Dealing with dates and timestamps

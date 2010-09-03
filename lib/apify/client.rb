@@ -35,8 +35,7 @@ module Apify
     
     def request(method, path, args = nil)
       url = build_url(path)
-      args ||= {}
-      params = { :args => args.to_json }
+      params = args ? { :args => args.to_json } : {}
       [:get, :head].include?(method) and params = { :params => params }
       json = RestClient.send(method, url, params)
       JSON.parse(json)
