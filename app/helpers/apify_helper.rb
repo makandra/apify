@@ -1,7 +1,7 @@
 module ApifyHelper
 
   def api_docs_artifact(action, artifact, nature)
-    show_id = "#{nature}_#{artifact}_for_#{action.name}"
+    show_id = "#{nature}_#{artifact}_for_#{action.uid}"
     show_link = link_to_function('show', "document.getElementById('#{show_id}').style.display = 'block';")
     download_url = url_for(:action => action.name, artifact.to_sym => nature.to_s)
     download_tooltip = "#{action.method.to_s.upcase} #{download_url} to download"
