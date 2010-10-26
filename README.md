@@ -142,6 +142,8 @@ Here is another example for a more complex schema:
       end
     end
 
+Note that the schema considers an key/value pair to be "present" when the key is present, even if the value is `nil`. That means if an object entry is optional and you want to omit that entry, you need to leave out the entire key/value pair.
+
 
 Auto-generated API documentation
 --------------------------------
