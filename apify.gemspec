@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{apify}
-  s.version = "0.4.5"
+  s.version = "0.5.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Henning Koch"]
-  s.date = %q{2010-10-18}
+  s.date = %q{2010-10-29}
   s.description = %q{Compact definition of JSON APIs for Rails applications. }
   s.email = %q{github@makandra.de}
   s.extra_rdoc_files = [
@@ -79,6 +79,7 @@ Gem::Specification.new do |s|
      "lib/apify/client.rb",
      "lib/apify/errors.rb",
      "lib/apify/exchange.rb",
+     "lib/apify/patterns.rb",
      "lib/apify/schema_helper.rb",
      "spec/apify/action_spec.rb",
      "spec/apify/client_spec.rb",
