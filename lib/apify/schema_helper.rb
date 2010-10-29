@@ -39,17 +39,17 @@ module Apify
 
     def sql_date
       { 'type' => 'string',
-        'pattern' => Patterns::SQL_DATE.source }
+        'pattern' => Apify::Patterns::SQL_DATE.source }
     end
 
     def sql_datetime
       { 'type' => 'string',
-        'pattern' => Patterns::SQL_DATETIME.source }
+        'pattern' => Apify::Patterns::SQL_DATETIME.source }
     end
 
     def email
       { 'type' => 'string',
-        'pattern' => Patterns::EMAIL.source }
+        'pattern' => Apify::Patterns::EMAIL.source }
     end
 
   end

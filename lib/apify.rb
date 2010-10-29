@@ -2,6 +2,7 @@ require 'json'
 require 'jsonschema'
 
 require 'apify/errors'
+require 'apify/patterns'
 require 'apify/action'
 require 'apify/exchange'
 require 'apify/api'
