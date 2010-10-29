@@ -31,7 +31,7 @@ begin
     gemspec.authors = ["Henning Koch"]
     gemspec.add_dependency 'json'
     gemspec.add_dependency 'jsonschema'
-    gemspec.add_dependency 'rest-client'
+    gemspec.add_dependency 'rest-client', '>=1.6.1'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
