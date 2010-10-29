@@ -63,5 +63,10 @@ class Api < Apify::Api
     end
   end
 
+  get :schema_with_url do
+    schema :args do
+      object('url' => url)
+    end
+  end
 
 end

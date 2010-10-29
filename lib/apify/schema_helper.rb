@@ -52,5 +52,10 @@ module Apify
         'pattern' => Apify::Patterns::EMAIL.source }
     end
 
+    def url
+      { 'type' => 'string',
+        'pattern' => Apify::Patterns::URL.source }
+    end
+
   end
 end

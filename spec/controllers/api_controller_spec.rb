@@ -185,6 +185,25 @@ describe ApiController do
 
     end
 
+    describe '#url_helper' do
+
+      it 'should match a http address' do
+        get :schema_with_url, :args => {'url' => 'http://some.domain.tld/path/to?query=value'}.to_json
+        response.code.should == '200'
+      end
+
+      it 'should match a https address' do
+        get :schema_with_url, :args => {'url' => 'https://some.domain.tld/path/to?query=value'}.to_json
+        response.code.should == '200'
+      end
+
+      it 'should not match an invalid string' do
+        get :schema_with_url, :args => {'url' => 'foo:bar:bam'}.to_json
+        response.code.should == '500'
+      end
+
+    end
+
   end
 
   describe 'auto-generated documentation' do

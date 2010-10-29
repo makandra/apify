@@ -136,6 +136,7 @@ Here is another example for a more complex schema:
             'phone' => integer,
             'phone_type' => enum(string, 'home', 'office'),
             'email' => optional(email),
+            'website' => optional(url),
             'favorite' => boolean
           )
         )
