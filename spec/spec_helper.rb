@@ -19,5 +19,5 @@ ActiveRecord::Migrator.migrate("#{Rails.root}/db/migrate")
 Spec::Runner.configure do |config|
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures  = false
-  config.include WebMock
+  config.include WebMock::API
 end
