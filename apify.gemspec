@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{apify}
-  s.version = "0.5.1"
+  s.version = "0.5.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Henning Koch"]
-  s.date = %q{2010-10-29}
+  s.date = %q{2011-01-24}
   s.description = %q{Compact definition of JSON APIs for Rails applications. }
   s.email = %q{github@makandra.de}
   s.extra_rdoc_files = [
@@ -83,6 +83,7 @@ Gem::Specification.new do |s|
      "lib/apify/exchange.rb",
      "lib/apify/patterns.rb",
      "lib/apify/schema_helper.rb",
+     "rails/init.rb",
      "spec/apify/action_spec.rb",
      "spec/apify/client_spec.rb",
      "spec/app_root/app/controllers/api_controller.rb",
@@ -108,44 +109,44 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/makandra/apify}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Compact definition of JSON APIs for Rails applications.}
   s.test_files = [
     "spec/apify/action_spec.rb",
      "spec/apify/client_spec.rb",
-     "spec/spec_helper.rb",
      "spec/app_root/app/controllers/api_controller.rb",
      "spec/app_root/app/controllers/application_controller.rb",
      "spec/app_root/app/models/api.rb",
-     "spec/app_root/lib/console_with_fixtures.rb",
+     "spec/app_root/config/boot.rb",
+     "spec/app_root/config/environment.rb",
      "spec/app_root/config/environments/in_memory.rb",
      "spec/app_root/config/environments/mysql.rb",
      "spec/app_root/config/environments/postgresql.rb",
      "spec/app_root/config/environments/sqlite.rb",
      "spec/app_root/config/environments/sqlite3.rb",
-     "spec/app_root/config/boot.rb",
-     "spec/app_root/config/environment.rb",
      "spec/app_root/config/routes.rb",
+     "spec/app_root/lib/console_with_fixtures.rb",
      "spec/controllers/api_controller_spec.rb",
      "spec/models/api_spec.rb",
+     "spec/spec_helper.rb",
      "examples/client/client.rb",
-     "examples/host/app/controllers/application_controller.rb",
      "examples/host/app/controllers/api_controller.rb",
-     "examples/host/app/helpers/application_helper.rb",
+     "examples/host/app/controllers/application_controller.rb",
      "examples/host/app/helpers/api_helper.rb",
+     "examples/host/app/helpers/application_helper.rb",
      "examples/host/app/models/api.rb",
-     "examples/host/config/environments/production.rb",
+     "examples/host/config/boot.rb",
+     "examples/host/config/environment.rb",
      "examples/host/config/environments/development.rb",
+     "examples/host/config/environments/production.rb",
      "examples/host/config/environments/test.rb",
      "examples/host/config/initializers/backtrace_silencers.rb",
+     "examples/host/config/initializers/cookie_verification_secret.rb",
      "examples/host/config/initializers/inflections.rb",
      "examples/host/config/initializers/mime_types.rb",
      "examples/host/config/initializers/new_rails_defaults.rb",
      "examples/host/config/initializers/session_store.rb",
-     "examples/host/config/initializers/cookie_verification_secret.rb",
      "examples/host/config/routes.rb",
-     "examples/host/config/environment.rb",
-     "examples/host/config/boot.rb",
      "examples/host/db/seeds.rb"
   ]
 
@@ -153,7 +154,7 @@ Gem::Specification.new do |s|
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<json>, [">= 0"])
       s.add_runtime_dependency(%q<jsonschema>, [">= 0"])
       s.add_runtime_dependency(%q<rest-client>, [">= 1.6.1"])
