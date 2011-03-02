@@ -35,12 +35,20 @@ describe Apify::Client do
     WebMock.should have_requested(:get, "http://host/api/ping")
   end
 
-  it "should call GET actions correctly" do
+  it "should serialize params into the URL for GET requests" do
     client = Apify::Client.new(:host => 'host')
     args = { :name => 'Jack' }
     stub_request(:get, 'http://host/api/hello').with(:query => { :args => args.to_json }).to_return(:body => '{}')
     client.get('/api/hello', args)
     WebMock.should have_requested(:get, "http://host/api/hello").with(:query => { :args => args.to_json })
+  end
+
+  it "should serialize params into the URL for DELETE requests" do
+    client = Apify::Client.new(:host => 'host')
+    args = { :name => 'Jack' }
+    stub_request(:delete, 'http://host/api/terminate').with(:query => { :args => args.to_json }).to_return(:body => '{}')
+    client.delete('/api/terminate', args)
+    WebMock.should have_requested(:delete, "http://host/api/terminate").with(:query => { :args => args.to_json })
   end
 
   it "should connect using SSL" do

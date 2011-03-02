@@ -3,6 +3,7 @@
 require 'json'
 require 'restclient'
 require 'apify/errors'
+require 'cgi'
 
 module Apify
   class Client
@@ -34,9 +35,13 @@ module Apify
     private
     
     def request(method, path, args = nil)
-      url = build_url(path)
       params = args ? { :args => args.to_json } : {}
-      [:get, :head].include?(method) and params = { :params => params }
+      if [:get, :delete].include?(method)
+        url = build_url(path, params)
+        params = {}
+      else
+        url = build_url(path)
+      end
       json = RestClient.send(method, url, params)
       JSON.parse(json)
     rescue RestClient::Unauthorized => e
@@ -45,7 +50,7 @@ module Apify
       raise Apify::RequestFailed.new("API request failed with status #{e.http_code}", e.http_body)
     end
 
-    def build_url(path)
+    def build_url(path, params = {})
       url =  ""
       url << @protocol
       url << '://'
@@ -53,6 +58,11 @@ module Apify
       url << @host
       url << ":#{@port}" if @port
       url << path
+      unless params.empty?
+        url << '?'
+        url << params.collect { |k, v| "#{k}=#{CGI::escape(v.to_s)}" }.join('&')
+      end
+      url
     end
 
   end
