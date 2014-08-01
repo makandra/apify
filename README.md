@@ -293,10 +293,10 @@ You can also forego the automatic route generation completely and roll your own 
     end
 
 
-Rails 3 compatibility
+Compatibility
 ---------------------
 
-We cannot guarantee Rails 3 compatibility at this point, but we will upgrade the gem when Rails 3 is released.
+Has only been tested with Rails 2.3. Will probably blow up in anything newer.
 
 Credits
 -------
